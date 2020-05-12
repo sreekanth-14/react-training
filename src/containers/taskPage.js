@@ -4,6 +4,17 @@ import { bindActionCreators } from 'redux';
 import { addTask} from '../actions/task';
 import Task from '../components/task'
 
+class TaskPage extends React.Component {
+
+  render(){
+    const { addTask, taskList } = this.props;
+    return(
+      <Task addTask={addTask} taskList={taskList}/>
+    )
+  }
+
+}
+
 const mapStateToProps = (state) => ({
   taskList: state.task.list,
 })
@@ -15,4 +26,4 @@ const mapDispatchToProps = dispatch => bindActionCreators(
   dispatch,
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Task)
+export default connect(mapStateToProps, mapDispatchToProps)(TaskPage)
