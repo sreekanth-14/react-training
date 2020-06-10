@@ -1,4 +1,5 @@
 import React from 'react';
+import 'antd/dist/antd.css';
 import {List, Button, Input } from 'antd';
 
 class Task extends React.Component {
